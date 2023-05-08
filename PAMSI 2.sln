@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAMSI 2", "PAMSI 2\PAMSI 2.csproj", "{647A9827-C0EF-4676-918A-AEF9327DF552}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{647A9827-C0EF-4676-918A-AEF9327DF552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647A9827-C0EF-4676-918A-AEF9327DF552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647A9827-C0EF-4676-918A-AEF9327DF552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647A9827-C0EF-4676-918A-AEF9327DF552}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
