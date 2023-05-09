@@ -129,7 +129,7 @@ public class SimpleArrayList<T> : IEnumerable<T>
 
         foreach (var item in _items)
         {
-            if (predicate(item)) return item;
+            if (predicate.Invoke(item)) return item;
         }
 
         return default;
@@ -144,6 +144,8 @@ public class SimpleArrayList<T> : IEnumerable<T>
 
         Array.Resize(ref _items, newCapacity);
     }
+
+    public Span<T> AsSpan() => _items.AsSpan();
 
     public IEnumerator<T> GetEnumerator()
     {
