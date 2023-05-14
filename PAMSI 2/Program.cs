@@ -1,9 +1,9 @@
-﻿using System.Diagnostics;
-using PAMSI_2;
+﻿using PAMSI_2;
 using PAMSI_2.Sorts;
 
 var path = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\data.csv");
 var movies = FileParser.ParseData(path);
+movies.AssertNotNull();
 
 Console.WriteLine($"Total movie count: {movies.Count}");
 
@@ -15,13 +15,7 @@ foreach (var movie in movies)
 
 Console.WriteLine($"Movies with rating: {moviesWithRating.Count}");
 
-var sw = Stopwatch.StartNew();
+Benchmark.Run(moviesWithRating, MoveComparator.Rating);
 
-moviesWithRating.IntroSort(MoveComparator.Rating);
-Console.WriteLine("Sorted");
+Console.Read();
 
-sw.Stop();
-
-moviesWithRating.AssertSorted(MoveComparator.Rating);
-Console.WriteLine("Verified");
-Console.WriteLine(sw.Elapsed);

@@ -2,7 +2,7 @@
 
 namespace PAMSI_2;
 
-public readonly record struct Movie(int Id, string Title, double Rating)
+public record Movie(int Id, string Title, double Rating)
 {
     public bool HasRating => !double.IsNaN(Rating);
 

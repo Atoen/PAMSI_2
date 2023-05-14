@@ -19,6 +19,14 @@ public class SimpleArrayList<T> : IEnumerable<T>
         };
     }
 
+    public SimpleArrayList(SimpleArrayList<T> list)
+    {
+        _items = new T[list.Capacity];
+        Array.Copy(list._items, _items, list.Count);
+
+        Count = list.Count;
+    }
+
     private const int DefaultCapacity = 4;
 
     public int Count { get; private set; }

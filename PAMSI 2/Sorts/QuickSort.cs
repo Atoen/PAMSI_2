@@ -46,23 +46,23 @@ public static partial class Sort
     public static void QuickSort(this SimpleArrayList<Movie> source, SortComparison comparison)
     {
         if (source is not {Count: > 1}) return;
-
+    
         var span = source.AsSpan();
-
+    
         switch (comparison)
         {
             case SortComparison.Rating:
                 QuickSortRating(span, 0, source.Count - 1);
                 break;
-
+    
             case SortComparison.Title:
                 QuickSortTitle(span, 0, source.Count - 1);
                 break;
-
+    
             case SortComparison.Id:
                 QuickSortId(span, 0, source.Count - 1);
                 break;
-
+    
             default:
                 throw new ArgumentOutOfRangeException(nameof(comparison), comparison, null);
         }
